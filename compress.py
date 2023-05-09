@@ -22,7 +22,7 @@ def compress(file_path: str, output_file_path: Optional[str] = None, compression
     Returns:
         The path of the compressed file.
     """
-    if compression_level == None or compression_level > 9:
+    if compression_level == None or compression_level > 9 or compression_level < 0:
       compression_level = DEFAULT_COMPRESSION_LEVEL
     file_size = os.path.getsize(file_path)
     if file_size > MAX_FILE_SIZE:

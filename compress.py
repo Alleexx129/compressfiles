@@ -80,11 +80,4 @@ def decompress(file_path: str, output_file_path: Optional[str] = None, chunk_siz
     return output_file_path
 
 
-def read_file(file_path):
-    _, extension = os.path.splitext(file_path)
-    if extension == '.gz':
-        with gzip.open(file_path, 'rt') as f:
-            return f.read()
-    else:
-        with open(file_path, 'r') as f:
-            return f.read()
+

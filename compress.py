@@ -5,12 +5,11 @@ from typing import Optional
 from tqdm import tqdm
 
 
-MAX_FILE_SIZE = 500 * 1024 * 1024  # 500 MB
+MAX_FILE_SIZE = 500 * 1024 * 1024  # 500 MB, it can go higher
 DEFAULT_CHUNK_SIZE = 1024 * 1024  # 1 MB
 DEFAULT_COMPRESSION_LEVEL = 6  # The gzip compression level (0-9)
 
-def compress(file_path: str, output_file_path: Optional[str] = None, chunk_size: int = DEFAULT_CHUNK_SIZE,
-             compression_level: int = DEFAULT_COMPRESSION_LEVEL) -> str:
+def compress(file_path: str, output_file_path: Optional[str] = None, compression_level: Optional[str] = None, chunk_size: int = DEFAULT_CHUNK_SIZE) -> str:
     """
     Compresses a file using gzip.
 
@@ -23,6 +22,8 @@ def compress(file_path: str, output_file_path: Optional[str] = None, chunk_size:
     Returns:
         The path of the compressed file.
     """
+    if compression_level == None or compression_level > 9:
+      compression_level = DEFAULT_COMPRESSION_LEVEL
     file_size = os.path.getsize(file_path)
     if file_size > MAX_FILE_SIZE:
         print(f"Warning: {file_path} is a large file and may take a while to compress.")

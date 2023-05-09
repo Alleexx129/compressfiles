@@ -6,7 +6,10 @@ setup(
     packages=find_packages(),
     install_requires=[
         'numpy',
-        'pandas'
+        'pandas',
+        'gzip',
+        'typing',
+        'tqdm'
     ],
     author='Alleexx',
     author_email='Alleexx129@gmail.com',

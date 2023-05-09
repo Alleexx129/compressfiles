@@ -12,7 +12,7 @@ pip install txt-compressor
 
 ## Usage
 
-The package provides two main functions: `compress()` and `decompress()`.
+The package provides two main functions: `compress()` and `decompress()`. 
 
 ### Compressing a txt file
 
@@ -29,8 +29,8 @@ This will compress `my_file.txt` and save the compressed file as `my_file.txt.gz
 You can also specify the output file path using the `output_file_path` parameter:
 
 compress('my_file.txt','my_file.txt.gz')
-
-
+You can customize the compression level (0-9), default is '6'
+compress('my_file.txt','my_file.txt.gz', '8')
 
 ### Decompressing a file
 

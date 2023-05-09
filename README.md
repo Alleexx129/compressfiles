@@ -50,20 +50,6 @@ decompress('my_file.gz', 'my_file.txt')
 
 
 
-### Reading a file
-
-To read the contents of a file (whether compressed or not), use the `read_file()` function. For example:
-
-from gzip_utility import read_file
-
-content = read_file('my_file.txt')
-
-
-
-This will read the contents of `my_file.txt` and return them as a string.
-
-If the file is compressed, `read_file()` will automatically decompress it before reading its contents.
-
 ## License
 
 This project is licensed under the terms of the MIT license. See the `LICENSE` file for details.

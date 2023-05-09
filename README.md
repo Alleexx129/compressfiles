@@ -28,9 +28,9 @@ This will compress `my_file.txt` and save the compressed file as `my_file.txt.gz
 
 You can also specify the output file path using the `output_file_path` parameter:
 
-compress('my_file.txt','my_file.txt.gz')
+compress('my_file.txt','my_file.gz')
 You can customize the compression level (0-9), default is '6'
-compress('my_file.txt','my_file.txt.gz', '8')
+compress('my_file.txt','my_file.gz', '8')
 
 ### Decompressing a file
 
@@ -42,7 +42,7 @@ decompress('my_file.gz')
 
 
 
-This will decompress `my_file.txt.gz` and save the decompressed file as `my_file.txt`.
+This will decompress `my_file.gz` and save the decompressed file as `my_file.txt`.
 
 You can also specify the output file path using the `output_file_path` parameter:
 

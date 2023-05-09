@@ -44,7 +44,7 @@ def compress(file_path: str, output_file_path: Optional[str] = None, compression
                     output_file.write(chunk)
                     pbar.update(len(chunk))
     return output_file_path
-
+                os.remove(file_path) 
 
 
 
@@ -77,6 +77,7 @@ def decompress(file_path: str, output_file_path: Optional[str] = None, chunk_siz
                         break
                     output_file.write(chunk)
                     pbar.update(len(chunk))
+                os.remove(file_path)
     return output_file_path
 
 

@@ -24,7 +24,7 @@ compress('my_file.txt')
 
 
 
-This will compress `my_file.txt` and save the compressed file as `my_file.txt.gz`.
+This will compress `my_file.txt` and save the compressed file as `my_file.gz`.
 
 You can also specify the output file path using the `output_file_path` parameter:
 

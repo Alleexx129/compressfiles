@@ -6,7 +6,7 @@ This is a Python package that provides a simple utility for compressing and deco
 
 You can install the package using pip:
 
-pip install txt-compressor
+pip install `compressfiles`
 
 
 
@@ -18,7 +18,7 @@ The package provides two main functions: `compress()` and `decompress()`.
 
 To compress a file, use the `compress()` function. For example:
 
-from txt-compressor import compress
+from compressfiles import compress
 
 compress('my_file.txt')
 
@@ -30,13 +30,13 @@ You can also specify the output file path using the `output_file_path` parameter
 
 compress('my_file.txt','my_file.gz')
 You can customize the compression level (0-9), default is '6'
-compress('C:/Users/the_name/downloads/my_file.txt','my_file', '8') # don't put .gz for the output or it will be my_file.gz.gz
-It is supposed to output my_file.gz 
+compress('my_file.txt','my_file.gz', '8')
+
 ### Decompressing a file
 
 To decompress a file, use the `decompress()` function. For example:
 
-from txt-compressor import decompress
+from compressfiles import decompress
 
 decompress('my_file.gz')
 
